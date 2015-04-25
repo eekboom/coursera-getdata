@@ -38,7 +38,10 @@ See the file README.txt in that directory for more info on the raw data.
 ##Creating the tidy datafile
  
 Check out the github repository.
-Run the file "run_analyses.R" to recreate the tidy data "tidy-data.txt".
+
+Run the file "run_analysis.R" to recreate the tidy data "tidy-data.txt".
+
+Alternatively just download "run_analysis.R" and run it whith the raw data being present in the working directory.
  
 ##Cleaning of the data
 
@@ -57,7 +60,7 @@ The clean up code
 
 See the documented code in "run_analysis.R" for details.
  
-##Description of the variables in the tiny_data.txt file
+##Description of the variables in the tidy-data.txt file
 
 The tidy data contains 181 observations with 68 variables.
 
@@ -74,9 +77,9 @@ The column names are made up of these parts:
 * Acc: Acceleration  obtained from tzhe device's built-in accelerometer
 * Body: The body acceleration part of the total acceleration
 * Grav: The gravity acceleration part of the total acceleration
-* Gyro: Data obtained from the device's built-in Gyrometer.
+* Gyro: Data obtained from the device's built-in gyrometer
 * Mag: Magnitude
-* Jerk: Velocity derived in time to obtain Jerk signals
+* Jerk: Velocity derived in time to obtain jerk signals
 * _mean: Mean value
 * _std: Standard Deviation
 * _X, _Y, _Z: Acceleration along one specific axis
