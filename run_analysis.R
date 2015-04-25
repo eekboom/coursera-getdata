@@ -35,6 +35,18 @@ columnPattern <- "-mean\\(\\)|-std\\(\\)"
 # without column names, then select relevant columns by index,
 # then set the correct column names for the remaining columns
 relevantColumnIndices <- grep(columnPattern, columnNames, value=FALSE)
+relevantColumnNames <- columnNames[relevantColumnIndices]
+
+# Clean up column names, so that they could be used as variable names in R
+# remove "()" in names
+relevantColumnNames <- sub("\\(\\)", "", relevantColumnNames)
+# replace "-" by "_"
+relevantColumnNames <- gsub("-", "_", relevantColumnNames)
+# Replace single letter prefix by its long form
+relevantColumnNames <- gsub("^t", "time", relevantColumnNames)
+relevantColumnNames <- gsub("^f", "frequency", relevantColumnNames)
+# Fix duplicated "Body" terms
+relevantColumnNames <- gsub("BodyBody", "Body", relevantColumnNames)
 
 # read table that contain codes and labels for activities
 activityLabelsFile <- paste0(dataRootDir, "/activity_labels.txt")
@@ -56,7 +68,7 @@ readDataSet <- function (name) {
     # keep only relevant columns
     data <- select(data, relevantColumnIndices)
     # and assign names
-    colnames(data) <- columnNames[relevantColumnIndices]
+    colnames(data) <- relevantColumnNames
     
     # for each observation this variable contains the activity code
     activityCodes <- read.table(paste0(dataSetDir, "y_", name, ".txt"), col.names="code")
