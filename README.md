@@ -88,15 +88,15 @@ See the file from the raw data set for more specific information: "UCI HAR Datas
 
 All columns in the tidy data set:
   
- 1. subject
- 2. activity
- 3. timeBodyAcc_mean_X
- 4. timeBodyAcc_mean_Y
- 5. timeBodyAcc_mean_Z
- 6. timeBodyAcc_std_X
- 7. timeBodyAcc_std_Y
- 8. timeBodyAcc_std_Z
- 9. timeGravityAcc_mean_X
+1. subject
+2. activity
+3. timeBodyAcc_mean_X
+4. timeBodyAcc_mean_Y
+5. timeBodyAcc_mean_Z
+6. timeBodyAcc_std_X
+7. timeBodyAcc_std_Y
+8. timeBodyAcc_std_Z
+9. timeGravityAcc_mean_X
 10. timeGravityAcc_mean_Y
 11. timeGravityAcc_mean_Z
 12. timeGravityAcc_std_X
