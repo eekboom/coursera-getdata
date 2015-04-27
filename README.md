@@ -1,3 +1,5 @@
+**Please Note: CodeBook.md was created only on Monday, but all its content was previously available in README.md**
+
 
 # Human Activity Recognition Using Smartphones: Data Cleanup
 This is my solution of the
