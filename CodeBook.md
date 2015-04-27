@@ -36,7 +36,7 @@ The first two columns indicate the subject index (a particular human, who partic
 that the subject was executing while the data was measured.
 
 The rest of the columns are mean values of measured sensor data.
-
+All these measurement columns are numeric with value in between -1 ... 1.
 
 To avoid very long column names some abbreviations are used in the names.
 The column names are made up of these parts:
@@ -51,6 +51,8 @@ The column names are made up of these parts:
 * _mean: Mean value
 * _std: Standard Deviation
 * _X, _Y, _Z: Acceleration along one specific axis
+
+For better readability of these long, multi-word column names camelCase is used.
 
 See the file from the raw data set for more specific information: "UCI HAR Dataset/features_info.txt". 
 
